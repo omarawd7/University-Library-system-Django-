@@ -1,0 +1,68 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+.buy_now_button a{
+    text-align: center;
+    display: block;
+    width: 100px;
+    padding: 4px 0 5px 0;
+    margin-bottom: 10px; 
+    background: url("{% static 'images/templatemo_btn_02.jpg' %}") no-repeat;
+
+    color: #FFFFFF;
+    font-weight: bold;
+    text-decoration: none;
+    clear: both;
+}
+
+.detail_button a{
+text-align: center;
+    display: block;
+    width: 100px;
+    padding: 4px 0 5px 0;
+    margin-bottom: 10px; 
+    background:url("{% static 'images/templatemo_btn_01.jpg' %}") no-repeat;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    clear: both; 
+}
+</style>
+
+<script>
+  function myFunction1() {
+    var number = "available";
+    document.getElementById("myText").innerHTML = number;
+  }
+  function myFunction2() {
+    var number = "Not_avalible";
+    document.getElementById("myText").innerHTML = number;
+  }
+</script>
+
+<!--الكونتنت كلو-->
+<div class="background">
+
+  <div id="templatemo_content_right">
+    {% for book in books %}
+    <div class="templatemo_product_box">
+        <h1 style="margin: auto; padding: auto;">Book Title:{{book.title}}</h1>
+        <h1 style="margin: auto; padding: auto;">Author: {{book.author}}</h1>
+        
+     <img style="width: 120px; height: 170px;" src="{{book.book_photo.url}}" alt="image" />
+          <div class="product_info">
+            <p>Category : {{book.category}}</p>
+            <p>Price : {{book.price}}</p>
+            <p id="statushtml">status :<span id="myText">{{book.status}}</span> </p>
+            <div onload="myFunction2()" class="buy_now_button"><a href="javascript:myFunction2()">Borrowing</a></div>
+            <div onload="myFunction1()" class="detail_button"><a href="javascript:myFunction1()">Returning</a></div>
+          </div>   
+      </div>
+    {% endfor %}
+  
+  </div>
+
+{% endblock  %}

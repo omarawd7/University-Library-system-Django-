@@ -1,0 +1,131 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+
+    <style>
+        .logo {
+            width: 7%;
+            border-radius: 220px;
+            margin: 0% 0% 0% 47%;
+
+        }
+
+        .container {
+            width: 30%;
+            height: 90vh;
+            background-color: black;
+            margin-left: 35%;
+            color: aliceblue;
+            opacity: 0.79;
+            border-radius: 15px;
+        }
+
+        h1 {
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .container p {
+            font-size: 22px;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+
+        .container input[type="text"],
+        input[type="password"] ,input[type="submit"]{
+            border: none;
+            border-bottom: 1px solid #fff;
+            border-radius: 40px;
+            background: transparent;
+            outline: none;
+            height: 40px;
+            width: 90%;
+            color: #fff;
+            font-size: 16px;
+            margin: 0px 5px 0px 15px;
+        }
+
+        .sign , .container input[type="submit"]  {
+            display: block;
+            margin: auto;
+            margin-top: 50px;
+        }
+
+        button ,.container input[type="submit"] {
+            width: 55%;
+            height: 6%;
+            border-radius: 20px;
+            border-style: none;
+            background-color: crimson;
+
+        }
+
+        .sign a,.container input[type="submit"] {
+            border-style: none;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bolder;
+            color: black;
+        }
+
+        button:hover,.container input[type="submit"]:hover {
+            background-color: darkgrey;
+        }
+
+        .for {
+            color: darkgray;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        body {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("{% static 'images/University.jpg'%}");
+            background-size: cover;
+            background-position: center;
+        }
+
+        a:hover {
+            color: crimson;
+        }
+     
+    </style>
+
+
+</head>
+
+<body>
+    
+    <img class="logo" src="{%static 'images\sign_in.png'%}" alt="logo">
+    
+    <div class="container">
+        <h1>Log In</h1>
+        <p> User Name</p>
+        <form method="POST" action="">
+            {% csrf_token %}
+            <input id="username" type="text" name="username" placeholder="Username">
+            <p>Password</p>
+            <input id="pass" type="password" name="password" placeholder="Password">
+            <input id="link" style="cursor:pointer;" class="sign" type="submit" value="login"  onclick="check()" >
+            <script type="text/javascript" src="{% static 'js\check.js' %}"></script>
+        </form>
+        
+        <button class="sign"><a href="http://127.0.0.1:8000/">Back To Home</a></button>
+       <!-- <p><a class="for" href="Sign_Up">Forgot Your Password?!</a></p>-->
+            {% for message in messages %}
+                <p id="messages">{{message}}</p>
+            {% endfor %}
+        <p><a class="for" href="http://127.0.0.1:8000/Sign_Up/">I Don't Have An Account</a></p>
+        
+    </div>
+
+</body>
+
+</html>

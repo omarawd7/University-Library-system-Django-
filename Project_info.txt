@@ -1,0 +1,16 @@
+NOTE PLEASE:to run the whole application correctly, you have to (log in as admin) first using:
+username:fcai
+password:2019
+------------
+Project Name: University Library system
+------------
+Group no: S6
+------------
+Project Members:
+Abdalla Ashraf Mohammed Abdallah	20190324	
+Fatma Sobhy Mostafa Ali			20190375	
+Omar Mohamed Mahmoud 			20190730
+Mohamed Ebrahem Mohamed Abd El Wahed	20190413	
+Sara Sherif Lottfy Abofro		20190229	
+Ahmed Ismail Belal 			20190016
+

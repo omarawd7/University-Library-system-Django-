@@ -1,0 +1,272 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title >Books</title>
+    <style>
+        
+        
+        
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            
+        }
+        body {
+            background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.5)),url("../../static/images/University.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 150vh;
+        }
+        
+        .background{
+            width: 100%;
+            height: 100vh;
+            
+        }
+        .nav{
+            background-color: rgba(0, 0, 0, 0.212);
+            width: 100%;
+            height: 10%;
+            
+        }
+        
+        .nav ul li::after
+        {
+            content: '';
+            height:3px;
+            width:0px;
+            background: crimson;
+            position:absolute;
+            left: 0;
+            bottom:0;
+            transition: 0.5s;
+            
+        }
+        .nav ul li:hover::after
+        {
+            width: 100%;
+            
+        }
+        .nav ul li a:hover:not(.active)
+        {
+            color: crimson;
+        }
+        
+        .nav ul li{
+            list-style: none;
+            float: left;
+            position :relative;
+            margin-top: 25px;
+            
+        }
+        .nav ul li a{
+            padding: 15px 20px;
+            text-decoration: none;
+            color: #ffff;
+            font-size: 20px;
+        }
+        .learn{
+            float: right;
+            border-radius: 220px;
+            width: 10%;
+            height:200%;
+            margin-right: 30px;
+        }
+        
+        /*middel left content*/
+        #templatemo_content_right .templatemo_product_box {
+            float: left;
+            width: 400px;
+            height: 290px;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid rgb(255, 255, 255);
+            box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.822);
+        }
+        
+        #templatemo_content_right h1 {
+            padding: 10px;
+            margin: 0 0 20px 0;
+            font-size: 15px;
+            color: #cbc750;
+            background: url("{%static 'images\templatemo_h1_bg.jpg'%}");
+    }
+    .buy_now_button a{
+    text-align: center;
+    display: block;
+    width: 100px;
+    padding: 4px 0 5px 0;
+    margin-bottom: 10px; 
+    background: url("{% static 'images/templatemo_btn_02.jpg' %}") no-repeat;
+
+    color: #FFFFFF;
+    font-weight: bold;
+    text-decoration: none;
+    clear: both;
+}
+
+.detail_button a{
+    text-align: center;
+    display: block;
+    width: 100px;
+    padding: 4px 0 5px 0;
+    margin-bottom: 10px; 
+    background:url("{% static 'images/templatemo_btn_01.jpg' %}") no-repeat;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    clear: both;
+    
+}
+    
+    #templatemo_content_right ul {
+        margin: 0 0 20px 0;
+        padding: 0 0 0 20px;
+        list-style: none;
+    }
+    #templatemo_content_right p {
+        text-align: justify;
+        padding: 0 0 8px 0;
+        color: rgb(255, 255, 255);
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    
+    #templatemo_content_right li {
+        padding: 0 0 3px 0;
+    }
+    
+    #templatemo_content_right .image_panel {
+        float: left;
+        width: 100px;
+        margin-right: 20px;
+    }
+    
+    
+    .templatemo_product_box h1 span {
+        font-weight: normal;
+        background: url("{%static 'images\templatemo_btn_1.jpg'%}");
+    }
+    
+    .templatemo_product_box img {
+        float: left;
+        margin-right: 20px;
+    }
+    
+    
+    
+    .templatemo_product_box .product_info {
+        float: left;
+        width: 180px;
+    }
+    
+    .product_info p {
+        margin-bottom: 15px;
+
+    }
+
+
+
+
+
+
+
+
+    .wrapper {
+  position: relative;
+  display: flex;
+  min-width: 100px;
+}
+
+.search {
+  border: 1px solid grey;
+  border-radius: 5px;
+  height: 25px;
+  width: 100%;
+  padding: 2px 23px 2px 30px;
+  outline: 0;
+  background-color: #f5f5f5;
+}
+
+.search-icon {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 14px;
+}
+
+.clear-icon {
+  position: absolute;
+  top: 9px;
+  right: 8px;
+  width: 12px;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.search:hover, .search:focus {
+  border: 1px solid #009688;
+  background-color: white;
+}
+
+
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <img class="learn" style="border-radius: 100%; height:130px;" src="{%static 'images\OIP.jpg'%}" alt="learn">
+        <ul>
+            <li><a href="http://127.0.0.1:8000/">Home</a></li>
+            <li><a href="about">About US</a></li>
+            <li><a href="Sign_Up">Sign up</a></li>
+            <li><a href="log_in">Log In as admin</a></li>
+            <li><a href="log_in">Log In as User</a></li>
+            
+        </ul>
+      </div>
+      <br>
+      <h1 style="float: left; display: inline;color: white;  margin-left: 600px;">Books</h1><br><br><br>
+      
+      
+      <form method="GET" >
+        <div >
+         
+            <input class="search" type="text" placeholder="Search.."  name="search_name">
+
+          </div>
+   
+
+
+      </form>
+
+
+
+      <div id="templatemo_content_right">
+        {% for book in books %}
+        <div class="templatemo_product_box">
+            <h1 style="margin: auto; padding: auto;">Book Title: {{book.title}}</h1>
+            <h1 style="margin: auto; padding: auto;">Author: {{book.author}}</h1>
+         <img style="width: 120px; height: 170px;" src="{{book.book_photo.url}}" alt="image" />
+              <div class="product_info">
+                <p>Category : {{book.category}}</p>
+                <div class="buy_now_button"><a href="#">Borrowing</a></div>
+                <div class="detail_button"><a href="#">Returning</a></div>
+              </div>   
+          </div>
+        {% endfor %}
+      </div>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <title>Home Page</title>
+
+<script src="{% static 'check.js' %}"></script>
+
+</head>
+<style>
+
+body {
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.5)),url("{% static 'images/University.jpg' %}");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 150vh;
+}
+
+</style>
+
+
+<body>
+   {% include 'parts/nave.html' %}
+   {% include 'parts/sidebar.html' %}
+    {% block content %}
+
+    {% endblock  %}
+    
+    {% include 'parts/footer.html' %}
+
+</div>
+
+</body>
+</html>

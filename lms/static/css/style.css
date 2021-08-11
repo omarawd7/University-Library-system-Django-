@@ -1,0 +1,201 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    
+}
+body {
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.5)),url("images/University.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 150vh;
+}
+
+.background{
+    width: 100%;
+    height: 100vh;
+
+}
+.nav{
+    background-color: rgba(0, 0, 0, 0.212);
+    width: 100%;
+    height: 10%;
+  
+}
+
+.nav ul li::after
+{
+   content: '';
+   height:3px;
+   width:0px;
+   background: crimson;
+   position:absolute;
+   left: 0;
+   bottom:0;
+   transition: 0.5s;
+
+}
+.nav ul li:hover::after
+{
+    width: 100%;
+
+}
+.nav ul li a:hover:not(.active)
+{
+color: crimson;
+}
+
+.nav ul li{
+    list-style: none;
+    float: left;
+    position :relative;
+    margin-top: 25px;
+
+}
+.nav ul li a{
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #ffff;
+    font-size: 20px;
+}
+.learn{
+float: right;
+border-radius: 220px;
+width: 10%;
+height:200%;
+margin-right: 30px;
+}
+
+ .sidebar {
+	padding:0;
+	float:right;
+	width:300px;
+    width: 100%;
+    height: 100vh;
+}
+ .sidebar .gadget {
+	margin:0;
+	padding:8px 16px 8px 40px;
+}
+ .sidebar{
+    background-color: rgba(0, 0, 0, 0.212);
+    width:25%;
+    height:96%;
+  
+}
+.sidebar ul li::after
+
+{
+   content: '';
+   height:3px;
+   width:0px;
+   background: crimson;
+   position:absolute;
+   left: 0;
+   bottom:0;
+   transition: 0.5s;
+
+}
+.sidebar ul li:hover::after
+{
+    width: 100%;
+
+}
+.sidebar ul li a:hover:not(.active)
+{
+color: crimson;
+}
+
+.sidebar ul li{
+    list-style: none;
+    float: left;
+    position :relative;
+    margin-top: 25px;
+
+}
+.sidebar ul li a{
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #ffff;
+    font-size: 20px;
+}
+/*middel left content*/
+#templatemo_content_right .templatemo_product_box {
+    float: left;
+	width: 400px;
+	height: 290px;
+	padding: 10px;
+    margin: 5px;
+	border: 1px solid rgb(255, 255, 255);
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.822);
+}
+
+#templatemo_content_right h1 {
+    padding: 10px;
+	margin: 0 0 20px 0;
+	font-size: 15px;
+	color: #cbc750;
+	background: url(images/templatemo_h1_bg.jpg);
+}
+
+
+#templatemo_content_right ul {
+    margin: 0 0 20px 0;
+	padding: 0 0 0 20px;
+	list-style: none;
+}
+#templatemo_content_right p {
+    text-align: justify;
+    padding: 0 0 8px 0;
+    color: rgb(255, 255, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#templatemo_content_right li {
+    padding: 0 0 3px 0;
+}
+
+#templatemo_content_right .image_panel {
+    float: left;
+	width: 100px;
+	margin-right: 20px;
+}
+
+
+.templatemo_product_box h1 span {
+    font-weight: normal;
+}
+
+.templatemo_product_box img {
+    float: left;
+	margin-right: 20px;
+}
+
+
+
+.templatemo_product_box .product_info {
+    float: left;
+    width: 180px;
+}
+
+.product_info p {
+    margin-bottom: 15px;
+}
+#templatemo_footer {
+	clear: both;
+	width: 100%;
+	padding: 20px 0px 20px 0;
+	text-align: center;
+	border-top: 1px solid #25211e;
+	color: #999;
+	background-color: #111110;
+}
+
+#templatemo_footer a{
+	color: #fff;
+	font-weight: normal;
+}
+    /*
+*/
